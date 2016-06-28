@@ -1,0 +1,14 @@
+.main{
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: center; 
+  vertical-align: middle; 
+  height:450px; width:500px  
+}
+.btn-group{
+  border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:4px; width:100px; height:36px;
+}
+.buttn{
+  font-family:80% Roboto, Verdana, sans-serif; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:4px; width:100px; height:36px;
+}
