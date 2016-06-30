@@ -1,0 +1,82 @@
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+nav {
+	background-color: black;
+	height: 80px;
+	margin-right: 0px;
+}
+.buttons{
+	float: right;
+	margin-top: 15px;
+}
+
+.image{
+	float: left;
+	max-width: 50px;
+}
+
+.left li{
+	color: #fff;
+    font-family: WWFRegular;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 38px;
+}
+
+.middle{
+
+}
+
+.right li{
+	border-radius: 4px;
+}
+#donate{
+	background-color: orange;
+}
+#adopt{
+	background-color: yellow;
+}
+
+ul {
+	list-style-type: none;
+	}
+li {
+	display: inline-block;
+  	padding: 15px;
+  	color:  white;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+}
+
+img{
+	max-width: 80px;
+	max-height: 100px;
+}
+
+@media(max-width: 768px){
+	.buttons{
+
+	}
+
+}
+
+@media(max-width: 949px){
+
+}
