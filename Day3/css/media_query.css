@@ -1,0 +1,47 @@
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+    }
+.clearfix {
+ 	display: inline-block;
+ }
+/* start commented backslash hack \*/
+* html .clearfix { 
+	height: 1%; 
+}
+
+.clearfix { 
+	display: block; 
+}
+
+* { box-sizing: border-box; }
+
+.container {
+/*	width: 1000px;
+*/	max-width: 1000px;
+	margin: 0px auto;
+}
+
+.square{
+	width:25%;
+	height: 25%;
+	border: 3px solid black;
+	float: left;
+}
+
+@media(max-width: 768px){
+	.square{
+		width: 50%;
+	}
+	
+}
+
+@media(max-width: 480px){
+	.square{
+		width: 100%;
+	}
+}
