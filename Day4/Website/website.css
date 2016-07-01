@@ -12,9 +12,10 @@
 .clearfix { display: block; }
 /* close commented backslash hack */
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar-fixed-top .navbar-nav > li > a:hover, .navbar-fixed-top .navbar-nav > li > a:focus {
     background-color: transparent;
-    color: #FFC0CB;
+    color: white;
+    transition: all .3s;
 }
 
 nav {
@@ -37,13 +38,12 @@ nav {
     letter-spacing: 1px;
     line-height: 38px;
 }
-ul {
+#profile ul {
 	list-style-type: none;
 	}
 li {
 	display: inline-block;
   	padding: 15px;
-  	color:  white;
 }
 a {
   text-decoration: none;
@@ -52,8 +52,10 @@ a {
   text-transform: uppercase;
 }
 .contents {
-	/*border: 1pt solid red;*/
-    padding: 20px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 70px;
 }
 .contents > img{
 	width: 100%;
@@ -63,13 +65,13 @@ a {
     background:transparent;
 }
 .container{
-	text-align: center;
-}
-.left-content{
-	text-align: center;
+  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin: 0px
 }
 .left-top{
-	color: white;
 	padding-top: 130px;
 	padding-bottom: 50px;
 }
@@ -86,7 +88,7 @@ a {
 .name{
 	color: white;
 	padding-top: 200px;
-	font-family: Segoe UI ,Arial, Sans-serif;
+	font-family: Segoe UI, Arial, Sans-serif;
 }
 .icons ul{
 	list-style-type: none;
@@ -111,6 +113,23 @@ a {
 	
   }
 }
-body{
-	background-color: black;
+#profile{
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+#career{
+  color: black;
+  text-align: center;
+}
+#contact{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+#contact img{
+  height: 100px;
+  width: 100px;
 }
