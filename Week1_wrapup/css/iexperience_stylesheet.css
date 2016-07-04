@@ -1,0 +1,36 @@
+.pink{
+	background-color: 	#ff1493;
+}
+
+.navbar-brand img{
+	width: 578px;
+	height: 105px;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+.contents h2{
+	font-size: 30px;
+
+}
+
+.heading{
+	text-align: center;
+}
+.contents img, .row img{
+	border-radius: 100%;
+	width: 190px;
+	height: 190px;
+}
+li{
+	list-style-type: none;
+}
+.splash{
+	margin-top: 20px;
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+@media(max-width: 768px){
+
+}
