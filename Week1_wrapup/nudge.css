@@ -1,0 +1,40 @@
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+/*styling for nav */
+nav ul{
+	list-style-type: none;
+}
+.navbar{
+	border: 2px solid rgb(211,211,211);
+	max-height: 70px;
+	display: inline;
+}
+nav li{
+	display: inline;
+}
+.social-media-logos img{
+	width: 20px;
+	height: 20px;
+	display: inline;
+	padding: 5px;
+}
+
+.nav-logo img{
+	max-height: 55px;
+	padding: 5px;
+}
+.links{
+	text-transform: uppercase;
+	border: 2px solid green;
+}
