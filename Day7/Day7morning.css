@@ -1,0 +1,25 @@
+.lightbox-bg {
+	/* this should cover the entire screen with a transparent black background */
+	opacity: 0.5;
+	background-color: black;
+}
+
+.lightbox-contents {
+	/* this should center the image on the screen on top of the background*/
+	background-position: center;
+	opacity: 1;
+}
+
+.lightbox {
+	/* this should not be on the screen to start*/
+	opacity: 0;
+}
+
+.isVisible {
+	/* this does exactly what it sounds like it does */
+	opacity: 1;
+
+}
+.change-color.makeRed{
+	color: red;
+}
