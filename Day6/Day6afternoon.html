@@ -35,8 +35,8 @@
             assert.ok(areRotatedVersions([3,6,7,9,1,2,4],[1,2,3,5,7,8]) === 'no', "Passed!" );
         });
         QUnit.test("areRotatedVersions test 3", function( assert ) {
-            assert.ok(areRotatedVersions([8,8,9,1,2,4],[1,2,4,8,8,9]) === 'yes', "Passed!" );
-        });
+            assert.ok(, "Passed!" );
+        });areRotatedVersions([8,8,9,1,2,4],[1,2,4,8,8,9]) === 'yes'
         QUnit.test("nPrimeNums test 1", function( assert ) {
             assert.ok(nPrimeNums(4) === "2,3,5,7", "Passed!" );
         });

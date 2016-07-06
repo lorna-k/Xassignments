@@ -48,6 +48,20 @@ function areRotatedVersions(array1, array2) {
 // Return a string of the first n prime numbers, separated by commas
 // e.g. "1,2,3,4"
 function nPrimeNums(n) {
+	var primes = [];
+	for(var i = 2; primes.length < n; i++){
+		var hasDivisor = false;
+		for(var count = 2; count < i ; count ++){
+			if(i % count === 0){
+				hasDivisor = true;
+				break;
+			}
+		}
+		if(!hasDivisor){
+			primes.push(i);
+		}
+	}
+	return primes.join(",");
 
 }
 

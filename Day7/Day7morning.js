@@ -10,9 +10,14 @@ function changeColor() {
 }
 
 function toggleImage() {
-	var button = document.getElementById("image");
+	//var showImage = document.getElementById("lightbox");
+	//showImage.classList.add('show');
 	//var splash = document.querySelectorAll('lightbox-contents');
-	button.classList.add('isVisible');
+	var splash = document.querySelectorAll(".lightbox")[0];
+	var splash2 = document.querySelectorAll(".lightbox-bg")[0];
+	splash.classList.add('isVisible');
+	splash2.classList.add('isVisible');
+	//document.getElementById("img").src = "http://www.lovethispic.com/uploaded_images/53451-Cute-Dog.jpg";
 }
 document.getElementById("name-btn").onclick = function() {
 	getFormValues();
