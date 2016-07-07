@@ -27,12 +27,12 @@ app.controller("GroceriesCtrl", function($scope) {
   };
 
   $scope.increaseQuantity = function(item){
-  	item.quantity ++;
+  	item.quantity = item.quantity + 1;
   };
 
   $scope.decreaseQuantity = function(item){
   	if(item.quantity > 0){
-  		item.quantity --;
+  		item.quantity = item.quantity -1;
   	}
   };
 

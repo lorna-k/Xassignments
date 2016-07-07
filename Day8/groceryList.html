@@ -2,8 +2,8 @@
 <head>
 	<title>My Grocery List</title>
 </head>
-<body ng-app = "MyGroceryList">
-	<div ng-controller = "GroceriesCtrl">
+<body ng-app="MyGroceryList">
+	<div ng-controller="GroceriesCtrl">
 		<h1>Lorna's Grocery List</h1>
 		<p>
 			<input ng-model="itemName" placeholder="Grocery Item"> Grocery Item
@@ -23,8 +23,8 @@
 			<ul>
 			<li ng-repeat="newItem in groceryList | filter:searchBar track by $index">
 				{{newItem.quantity}} : {{newItem.name}}
-				<button ng-click="increaseQuantity(item)">+</button>
-				<button ng-click="decreaseQuantity(item)">-</button>
+				<button ng-click="increaseQuantity(newItem)">+</button>
+				<button ng-click="decreaseQuantity(newItem)">-</button>
 			</li>
 			</ul>
 		</p>
