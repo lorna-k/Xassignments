@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>NY-T</title>
+</head>
+<body ng-app="nytimesApp">
+	<div class="container" ng-controller="MainCtrl">
+		<input ng-model="searchTerm">
+		<button ng-click="search()">Search</button>
+		<div ng-repeat="a in articles">
+			<h3><a href="{{a.web_url}}">{{a.headline.main}}</a></h3>
+		</div>
+	</div>
+
+	<script src="angular.js"></script>
+	<script src="nytimesApp.js"></script>
+</body>
+</html>

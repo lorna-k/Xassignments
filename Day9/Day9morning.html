@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>My Grocery List</title>
+</head>
+<body ng-app="MyGroceryList">
+	<div name="myForm" ng-controller="GroceriesCtrl">
+		<h1>Lorna's Grocery List</h1>
+		<div role="alert">
+			<span class="error" ng-show="myForm.input.$error.required">
+				Required!</span>
+			<span class="error" ng-show="myForm.input.$error.text">
+					Not a valid Item!</span>
+		</div>
+		<p>
+			<input ng-model="itemName" name="input" type="text" placeholder="Grocery Item" required> Grocery Item
+		</p>
+		<p>
+			<input ng-model="itemQuantity" placeholder="Quantity"> Qty
+		</p>
+		<p>
+			<button ng-click="addListItem()">Add to list</button>
+		</p>	
+		<p>
+			<input placeholder="Search" type="text" ng-model="searchBar">
+		</p>
+		
+		<p>Grocery List:</p>
+		<p>
+		<ul>
+			<li ng-repeat="item in groceryList | filter:searchBar track by $index">
+				<div ng-hide="item.isEditing"><span ng-dblclick="item.isEditing = true">
+					{{item.quantity}} : {{item.name}}</span>
+					<button ng-click="increaseQuantity(item)">+</button>
+					<button ng-click="decreaseQuantity(item)">-</button>
+					<button ng-click="item.isEditing = true">Edit</button>
+					<button ng-click="deleteItem($index)">Delete</button>
+				</div>
+				<div ng-show="item.isEditing">
+					<input ng-model="item.name">
+					<span><button ng-click="item.isEditing= false">Done</button></span>
+				</div>
+			</li>
+		</ul>
+		</p>
+		<p>
+			<button ng-click="clearCart()">Empty Cart</button>
+		</p>
+		
+	</div>
+
+<script src="./angular.js"></script>
+<script src="./Day9morning.js"></script>
+</body>
+</html>

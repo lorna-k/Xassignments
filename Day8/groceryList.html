@@ -3,10 +3,16 @@
 	<title>My Grocery List</title>
 </head>
 <body ng-app="MyGroceryList">
-	<div ng-controller="GroceriesCtrl">
+	<div name="myForm" ng-controller="GroceriesCtrl">
 		<h1>Lorna's Grocery List</h1>
+		<div role="alert">
+			<span class="error" ng-show="myForm.input.$error.required">
+				Required!</span>
+			<span class="error" ng-show="myForm.input.$error.text">
+					Not a valid Item!</span>
+		</div>
 		<p>
-			<input ng-model="itemName" placeholder="Grocery Item"> Grocery Item
+			<input ng-model="itemName" name="input" type="text" placeholder="Grocery Item" required> Grocery Item
 		</p>
 		<p>
 			<input ng-model="itemQuantity" placeholder="Quantity"> Qty
@@ -25,8 +31,12 @@
 				{{newItem.quantity}} : {{newItem.name}}
 				<button ng-click="increaseQuantity(newItem)">+</button>
 				<button ng-click="decreaseQuantity(newItem)">-</button>
+				<button ng-click="deleteItem($index)">Delete</button>
 			</li>
 			</ul>
+		</p>
+		<p>
+			<button ng-click="clearCart()">Empty Cart</button>
 		</p>
 		
 	</div>
