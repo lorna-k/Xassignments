@@ -1,1 +1,19 @@
-movie.html
+<div class="row">
+	<h3>{{ movie.Title }}</h3>
+
+	<img src="{{ movie.Poster }}">
+
+	<p><strong>Year Released: </strong> {{movie.Year}}</p>
+	<p><strong>Actors: </strong> {{movie.Actors}}</p>
+	<p><strong>Plot: </strong>{{movie.Plot}}</p>
+
+	<div class=" giphys">
+		<ul>
+		<li ng-repeat="gif in giphy" class="col-md-4 col-sm-12">
+			<img ng-src="{{gif.images.original.url}}">
+		</li>
+		</ul>
+	</div>
+	
+	
+</div> 

@@ -1,41 +1,56 @@
-var app = angular.module('movieApp', ['ngRoute']);
+var app = angular.module('movieApp', ['ngRoute']); 
+var GIPPY_API_KEY = 'dc6zaTOxFJmzC';
 
-app.config(function($routeProvider){
-	$routeProvider.when('#/', {
+app.config(function($routeProvider) {
+	$routeProvider.when('/', {
 		controller: 'MainCtrl',
-		templateUrl: 'templates/home.html'
+		templateUrl: 'templates/home.html',
 	})
-	routeProvider.when('/', {
+	$routeProvider.when('/movie/:movieId', {
 		controller: 'MovieCtrl',
-		templateUrl: 'templates/movies.html'
-
+		templateUrl: 'templates/movie.html',
 	})
 });
 
-$scope.movieArray = [];
-
-app.controller('MainCtrl', function($scope, $http){
-	var search = function(){
+app.controller('MainCtrl', function($scope, $http) {
+	$scope.search = function(){
 		$http({
-		url: 'http://www.omdbapi.com/?',
-		method: 'GET',
-		params:{
-			s: "yes";
-		}
-	}).then(function(response){
-		console.log(response);
+			url: "http://www.omdbapi.com/?",
+			method: "GET",
+			params: {
+				s: $scope.searchTerm
+			}
+		}).then(function(response) {
+			//console.log(response);
 		$scope.movieArray = response.data.Search;
 	})
 	};
-
-	
 });
 
-app.controller('MovieCtrl', function($scope, $http , $routeParams){
+app.controller('MovieCtrl', function($scope, $http, $routeParams) {
 	$http({
-		url:
-		method: 'GET'
-	}).then(function(response){
-		console.log(response);
+		url: "http://www.omdbapi.com/?",
+		params: {
+			i: $routeParams.movieId
+		}, 
+
+		method: "GET",
+	}).then(function(response) {
+		//console.log(response);
+		$scope.movie = response.data;
+
+		$http({
+			url: "http://api.giphy.com/v1/gifs/search?",
+			method: "GET",
+			params: {
+				q: $scope.movie.Plot,
+				api_key: 'dc6zaTOxFJmzC', 
+			}
+
+		}).then(function(response){
+			console.log(response);
+			$scope.giphy = response.data.data;
+		})
+
 	})
 });
